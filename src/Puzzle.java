@@ -3,8 +3,8 @@ import java.util.*;
 
 public class Puzzle {
 
-	//Map between word category and a list of all words belonging to that category
-	private Map<String, ArrayList<String>> wordMap;
+	//Map between word category and soln index
+	private Map<String, ArrayList<Integer>> categoryIndexMap;
 	//size of the resultant array (solution to the puzzle)
 	private int puzzleSize;
 	
@@ -14,11 +14,25 @@ public class Puzzle {
 	 */
 	public Puzzle(int puzzleSize){
 		this.puzzleSize = puzzleSize;
-		wordMap = new HashMap<String, ArrayList<String>>();
+		categoryIndexMap = new HashMap<String, ArrayList<Integer>>();
 	}
 	
-	public Map<String, ArrayList<String>> getWordMap() {
-		return this.wordMap;
+	
+	public void PrintPuzzle(){
+		String line;
+		for(String category : this.categoryIndexMap.keySet()){
+			line = category + ": " ;
+			for(Integer i : this.categoryIndexMap.get(category)){
+				line += i + ", ";
+			}
+			System.out.println(line);
+		}
+	}
+	
+	
+	
+	public Map<String, ArrayList<Integer>> getWordMap() {
+		return this.categoryIndexMap;
 	}
 	
 	public int getPuzzleSize(){

@@ -12,6 +12,19 @@ public class WordDatabase {
 		wordMap = new HashMap<String, ArrayList<String>>();
 	}
 	
+	public void PrintDatabase(){
+		String line;
+		for(String category : this.wordMap.keySet()){
+			line = category + ": " ;
+			for(String w : this.wordMap.get(category)){
+				line += w + ", ";
+			}
+			System.out.println(line);
+		}
+	}
+	
+	
+	
 	public Map<String, ArrayList<String>> getWordMap() {
 		return wordMap;
 	}

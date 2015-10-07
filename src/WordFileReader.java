@@ -23,14 +23,14 @@ public class WordFileReader {
 			Scanner sc = new Scanner(new File(filename));
 			String tempLine;
 			String tempCategory;
-			ArrayList<String> tempWords = new ArrayList<String>();
 			
 			while(sc.hasNextLine()){
             	tempLine = sc.nextLine();
             	tempCategory = tempLine.split(":")[0].trim();
-            	tempWords.clear();
-            	for(String s : tempLine.split(":")[1].split(",")){
-            		tempWords.add(s.trim());
+            	ArrayList<String> tempWords = new ArrayList<String>();
+            	String[] words = tempLine.split(":")[1].split(",");
+            	for(String w : words){
+            		tempWords.add(w.trim());
             	}
             	this.dataBase.getWordMap().put(tempCategory, tempWords);
 			}
@@ -43,11 +43,11 @@ public class WordFileReader {
 	
 	/**
 	 * Creates a puzzle object by reading the puzzle information contained in the specified file.
+	 * Also converts the index from the file (1 base) to index for the database arraylists vals (0 base)
 	 * @param filename the file containing the puzzle information
-	 * @param db database of all categories and words
 	 * @return a puzzle containing the data held in the specified file
 	 */
-	private Puzzle ReadPuzzle(String filename, WordDatabase db){
+	private Puzzle ReadPuzzle(String filename){
 		
 		try {
 			Scanner sc = new Scanner(new File(filename));
@@ -56,7 +56,6 @@ public class WordFileReader {
 			
 			String tempLine;
 			String tempCategory;
-			ArrayList<String> tempWords = new ArrayList<String>();
 			
 			while(sc.hasNextLine()){
             	tempLine = sc.nextLine();
@@ -67,17 +66,11 @@ public class WordFileReader {
             			return p;
             	}
             	tempCategory = tempLine.split(":")[0].trim();
-            	tempWords.clear();
+            	ArrayList<Integer> tempIndices = new ArrayList<Integer>();
             	for(String s : tempLine.split(":")[1].split(",")){
-            		tempWords.add(db.getWordMap().get(tempCategory).get(Integer.parseInt(s.trim())));
+            		tempIndices.add(Integer.parseInt(s.trim())-1);
             	}
-            	p.getWordMap().put(tempCategory, tempWords);
-            	
-            	System.out.print(tempCategory + ":");
-            	for(String s : tempWords){
-            		System.out.print(s);
-            		System.out.println();
-            	}
+            	p.getWordMap().put(tempCategory, tempIndices);
 			}
 			return p;
 		} catch (FileNotFoundException e) {
@@ -88,9 +81,6 @@ public class WordFileReader {
 	}
 	
 	
-	
-	
-	
 	public static void main(String[] args) {
 		
 		WordDatabase db = new WordDatabase();
@@ -98,9 +88,11 @@ public class WordFileReader {
 		
 		String filename = "./words/wordlist.txt";
 		fr.ReadFile(filename);
-		
+		//fr.dataBase.PrintDatabase();
+
 		String puzzleName = "./words/puzzle1.txt";
-		fr.ReadPuzzle(puzzleName, db);
+		//fr.ReadPuzzle(puzzleName).PrintPuzzle();
+		
 		
 	}
 
