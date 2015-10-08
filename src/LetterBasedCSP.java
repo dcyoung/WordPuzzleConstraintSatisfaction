@@ -72,7 +72,7 @@ public class LetterBasedCSP {
 			//for each word in that category
 			for(String word : db.getWordMap().get(category)){
 				//could the partial word construct word
-				if(Pattern.matches(word, partialWord)){
+				if(Pattern.matches(partialWord,word)){
 					WordExistsInCategory = true;
 					break;
 				}
@@ -114,10 +114,6 @@ public class LetterBasedCSP {
 			assignment.set(index, null);
 		}
 	}
-	
-//	private int SelectUnsignedVariable(){
-//		
-//	}
 	
 	
 	public void printResults(){
