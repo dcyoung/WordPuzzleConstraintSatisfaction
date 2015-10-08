@@ -210,6 +210,28 @@ public class LetterBasedCSP {
 		}
 	}
 	
+	public boolean[] testResults(){
+		boolean[] testResults = new boolean[this.results.size()];
+		int solnCount = 0;
+		boolean bSolnValid;
+		String tempWord;
+		
+		for(ArrayList<Character> soln : results){
+			bSolnValid = true;
+			for(String category : this.puzzle.getCategoryIndexMap().keySet()){
+				tempWord = "";
+				for(int index : this.puzzle.getCategoryIndexMap().get(category)){
+					tempWord += soln.get(index);
+				}
+				if(!this.db.getWordMap().get(category).contains(tempWord)){
+					bSolnValid = false;
+				}
+			}
+			testResults[solnCount] = bSolnValid;
+			solnCount++;
+		}
+		return testResults;
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

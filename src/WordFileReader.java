@@ -106,6 +106,8 @@ public class WordFileReader {
 
 		String puzzleName = "./words/puzzle1.txt";
 		Puzzle p = fr.ReadPuzzle(puzzleName);
+		//p.PrintPuzzle();
+		//p.PrintPuzzleInvert();
 		
 		LetterBasedCSP csp = new LetterBasedCSP(p, db);
 		ArrayList<Character> assignment = new ArrayList<Character>();
@@ -114,8 +116,13 @@ public class WordFileReader {
 		}
 		csp.RecursiveBacktracking(assignment);
 		csp.printResults();
-		//p.PrintPuzzle();
-		//p.PrintPuzzleInvert();
+		
+		System.out.println("Test Results:");
+		boolean[] testResults = csp.testResults();
+		for(int i = 0; i <testResults.length; i++ ){
+			System.out.print(testResults[i] + "\t");
+		}
+		
 		
 	}
 
