@@ -185,6 +185,7 @@ public class LetterBasedCSP {
 	 * Print the solution results
 	 */
 	public void printResults(){
+		//Print out the path
 		System.out.println("Size of results: "+ this.results.size());
 		for(ArrayList<Character> soln : results){
 			System.out.println();
@@ -193,6 +194,8 @@ public class LetterBasedCSP {
 			}
 		}
 		
+		//print out the assembled words for each category... could easily turn this
+		//into a check/test
 		int solnCount = 0;
 		for(ArrayList<Character> soln : results){
 			System.out.println();
@@ -205,8 +208,6 @@ public class LetterBasedCSP {
 			}
 			solnCount++;
 		}
-		
-		
 	}
 	
 	
