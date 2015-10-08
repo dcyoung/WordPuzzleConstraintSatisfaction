@@ -1,3 +1,8 @@
+/**
+ * WordFileReader: reads files of a specific format into word databases or puzzle structures
+ * 
+ * @author dcyoung3
+ */
 import java.io.*;
 import java.util.*;
 
@@ -16,6 +21,7 @@ public class WordFileReader {
 	
 	/**
 	 * Reads the specified file into a hashmap
+	 * Used to read the database file called "wordList.txt" into a WordDatabase structure
 	 * @param filename
 	 */
 	private void ReadFile(String filename){
@@ -71,8 +77,10 @@ public class WordFileReader {
             		tempIndices.add(Integer.parseInt(s.trim())-1);
             	}
             	Collections.sort(tempIndices);
+            	//generate the normal map (ie: mapping categories as keys to indices as values)
             	p.getCategoryIndexMap().put(tempCategory, tempIndices);
 			}
+			//Generate the inverted map (ie: mapping indices as keys to categories as values)
 			p.GenerateInvertedMap();
 			return p;
 		} catch (FileNotFoundException e) {
@@ -83,6 +91,10 @@ public class WordFileReader {
 	}
 	
 	
+	/**
+	 * Main, used temporarily to test the functionality
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		WordDatabase db = new WordDatabase();

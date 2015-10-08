@@ -1,3 +1,8 @@
+/**
+ * WordDatabase: holds all of the words as hashmap with categories as keys
+ * 
+ * @author dcyoung3
+ */
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -7,11 +12,16 @@ public class WordDatabase {
 	//Map between word category and a list of all words belonging to that category
 	private Map<String, ArrayList<String>> wordMap;
 		
-
+	/**
+	 * Constructor
+	 */
 	public WordDatabase(){
 		wordMap = new HashMap<String, ArrayList<String>>();
 	}
 	
+	/**
+	 * Print the database to the console
+	 */
 	public void PrintDatabase(){
 		String line;
 		for(String category : this.wordMap.keySet()){
@@ -24,7 +34,10 @@ public class WordDatabase {
 	}
 	
 	
-	
+	/**
+	 * 
+	 * @return the hashmap containing the database
+	 */
 	public Map<String, ArrayList<String>> getWordMap() {
 		return wordMap;
 	}

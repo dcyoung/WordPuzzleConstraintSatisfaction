@@ -1,10 +1,24 @@
+/**
+ * Puzzle: Holds the data for a puzzle in the form of 2 maps
+ * 	1. categoryIndexMap: 
+ * 		key = category, 
+ * 		value = array of indices corresponding to spaces in the solution 
+ * 				array that belong to word from that category
+ *  2. indexCategoryMap: 
+ *  	key = index corresponding a space in the solution array
+ *  	value = array of categories connected to that index 
+ * 
+ * @author dcyoung3
+ */
+
 import java.io.*;
 import java.util.*;
 
 public class Puzzle {
 
-	//Map between word category and soln index
+	//Map between word category and soln indices
 	private Map<String, ArrayList<Integer>> categoryIndexMap;
+	//Map between indices of the solution and categories
 	private Map<Integer, ArrayList<String>> indexCategoryMap;
 	//size of the resultant array (solution to the puzzle)
 	private int puzzleSize;
