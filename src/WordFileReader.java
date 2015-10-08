@@ -70,8 +70,10 @@ public class WordFileReader {
             	for(String s : tempLine.split(":")[1].split(",")){
             		tempIndices.add(Integer.parseInt(s.trim())-1);
             	}
-            	p.getWordMap().put(tempCategory, tempIndices);
+            	Collections.sort(tempIndices);
+            	p.getCategoryIndexMap().put(tempCategory, tempIndices);
 			}
+			p.GenerateInvertedMap();
 			return p;
 		} catch (FileNotFoundException e) {
 			System.out.println("Filename: \"" + filename + "\"\t could not be found.");
@@ -91,8 +93,17 @@ public class WordFileReader {
 		//fr.dataBase.PrintDatabase();
 
 		String puzzleName = "./words/puzzle1.txt";
-		//fr.ReadPuzzle(puzzleName).PrintPuzzle();
+		Puzzle p = fr.ReadPuzzle(puzzleName);
 		
+		LetterBasedCSP csp = new LetterBasedCSP(p, db);
+		ArrayList<Character> assignment = new ArrayList<Character>();
+		for (int i = 0; i < p.getPuzzleSize(); i++){
+			assignment.add(null);
+		}
+		csp.RecursiveBacktracking(assignment);
+		csp.printResults();
+		//p.PrintPuzzle();
+		//p.PrintPuzzleInvert();
 		
 	}
 
