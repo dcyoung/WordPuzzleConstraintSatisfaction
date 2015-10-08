@@ -192,6 +192,21 @@ public class LetterBasedCSP {
 				System.out.print(c + " -> ");
 			}
 		}
+		
+		int solnCount = 0;
+		for(ArrayList<Character> soln : results){
+			System.out.println();
+			System.out.print("(Soln #"+ solnCount + ")");
+			for(String category : this.puzzle.getCategoryIndexMap().keySet()){
+				System.out.print("  " + category + ": ");
+				for(int index : this.puzzle.getCategoryIndexMap().get(category)){
+					System.out.print(soln.get(index));
+				}
+			}
+			solnCount++;
+		}
+		
+		
 	}
 	
 	
