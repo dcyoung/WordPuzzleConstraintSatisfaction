@@ -7,7 +7,7 @@
  * 	
  * 	Letter Based version:
  * 		Variables X 	= 	index (of the solution array)
- * 		Domain D 		= 	permittable letters for a given variable
+ * 		Domain D 		= 	permit-able letters for a given variable
  * 		Constraints C 	= 	a letter must be able to form a word from a connected 
  * 							category given previous specified letters
  *  
@@ -174,9 +174,9 @@ public class LetterBasedCSP {
 					RecursiveBacktracking(assignment);
 				}
 			}
-			// Remove from assignment, keeping the tree at the current depth and 
-			// ensuring the next loop iteration is searching breadth
+			// Remove from assignment, keeping the tree at the current depth 
 			assignment.set(index, null);
+			// removing the character ensures the next loop iteration is searching breadth
 		}
 	}
 	
