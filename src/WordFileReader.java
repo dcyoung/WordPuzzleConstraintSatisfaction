@@ -109,14 +109,15 @@ public class WordFileReader {
 		//p.PrintPuzzle();
 		//p.PrintPuzzleInvert();
 		
-		LetterBasedCSP csp = new LetterBasedCSP(p, db);
+		//LetterBasedCSP csp = new LetterBasedCSP(p, db);
+		WordBasedCSP csp = new WordBasedCSP(p, db);
 		ArrayList<Character> assignment = new ArrayList<Character>();
 		for (int i = 0; i < p.getPuzzleSize(); i++){
 			assignment.add(null);
 		}
-		csp.RecursiveBacktracking(assignment);
+		csp.RecursiveBacktracking(assignment, 0);
 		csp.printResults();
-		
+		System.out.println();
 		System.out.println("Test Results:");
 		boolean[] testResults = csp.testResults();
 		for(int i = 0; i <testResults.length; i++ ){

@@ -11,7 +11,7 @@
  * 		Constraints C 	= 	a letter must be able to form a word from a connected 
  * 							category given previous specified letters
  *  
- * @author dcyoung3, nprince2
+ * @author dcyoung3, nprince2, cwan3
  */
 import java.util.ArrayList;
 import java.util.Collections;
