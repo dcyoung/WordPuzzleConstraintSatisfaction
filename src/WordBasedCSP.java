@@ -159,7 +159,7 @@ public class WordBasedCSP {
 			
 			//if wordVal is consistent with assignment given constraints
 			if(CheckIfConsistent(category, assignment)){
-				System.out.print(wordVal + " -> ");
+				System.out.print(" -> " + wordVal );
 				
 				if (!assignment.contains(null)) {
 					//add it to solution set
@@ -180,7 +180,7 @@ public class WordBasedCSP {
 			// removing the word ensures the next loop iteration is searching breadth
 		}
 		
-		System.out.print("backtrack\n");
+		System.out.print(" -> backtrack\n");
 		for (int i = 0; i < depth-1; i++) {
 			System.out.print("       ");
 		}
@@ -204,29 +204,30 @@ public class WordBasedCSP {
 	 * Print the solution results
 	 */
 	public void printResults(){
-		//Print out the path
-		System.out.println("Size of results: "+ this.results.size());
-		for(ArrayList<Character> soln : results){
-			System.out.println();
-			for(char c : soln){
-				System.out.print(c + " -> ");
-			}
-		}
+		System.out.println("Test Results:");
+		boolean[] testResults = this.testResults();
 		
-		//print out the assembled words for each category... could easily turn this
-		//into a check/test
+		//print out the assembled words for each category... 
 		int solnCount = 0;
 		for(ArrayList<Character> soln : results){
 			System.out.println();
-			System.out.print("(Soln #"+ solnCount + ")");
+			System.out.print("(Soln #"+ solnCount + ": ");
+			for(char c : soln){
+				System.out.print(c);
+			}
+			System.out.print(")");
+			
 			for(String category : this.puzzle.getCategoryIndexMap().keySet()){
 				System.out.print("  " + category + ": ");
 				for(int index : this.puzzle.getCategoryIndexMap().get(category)){
 					System.out.print(soln.get(index));
 				}
 			}
+			
+			System.out.print("\t[Valid = "+ testResults[solnCount] + "]");
 			solnCount++;
 		}
+		System.out.println();
 	}
 	
 	public boolean[] testResults(){

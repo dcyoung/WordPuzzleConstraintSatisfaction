@@ -181,33 +181,57 @@ public class LetterBasedCSP {
 	}
 	
 	
+	//broken right now... we can't do this at the end. it has to be done while doing the recursive DFS.
+	public void printTrace(){
+		//Print out the path trace
+		System.out.println("Size of results: "+ this.results.size());
+		
+		for( int solnIndex = 0 ; solnIndex < results.size(); solnIndex++ ){
+			if(solnIndex == 0){
+				for(char c : results.get(solnIndex)){
+					System.out.print(" -> " + c);
+				}				
+			}
+			else{
+				for(int cIndex = 0 ; cIndex < results.get(solnIndex).size(); cIndex++ ){
+					if(results.get(solnIndex).get(cIndex) == results.get(solnIndex-1).get(cIndex))
+						System.out.print("     ");
+					else
+						System.out.print(" -> "+ results.get(solnIndex).get(cIndex));
+				}
+			}
+			System.out.print("(found result: " + results.get(solnIndex).toString());
+			System.out.println();
+		}
+	}
 	/**
 	 * Print the solution results
 	 */
 	public void printResults(){
-		//Print out the path
-		System.out.println("Size of results: "+ this.results.size());
-		for(ArrayList<Character> soln : results){
-			System.out.println();
-			for(char c : soln){
-				System.out.print(c + " -> ");
-			}
-		}
+		System.out.println("Test Results:");
+		boolean[] testResults = this.testResults();
 		
-		//print out the assembled words for each category... could easily turn this
-		//into a check/test
+		//print out the assembled words for each category... 
 		int solnCount = 0;
 		for(ArrayList<Character> soln : results){
 			System.out.println();
-			System.out.print("(Soln #"+ solnCount + ")");
+			System.out.print("(Soln #"+ solnCount + ": ");
+			for(char c : soln){
+				System.out.print(c);
+			}
+			System.out.print(")");
+			
 			for(String category : this.puzzle.getCategoryIndexMap().keySet()){
 				System.out.print("  " + category + ": ");
 				for(int index : this.puzzle.getCategoryIndexMap().get(category)){
 					System.out.print(soln.get(index));
 				}
 			}
+			
+			System.out.print("\t[Valid = "+ testResults[solnCount] + "]");
 			solnCount++;
 		}
+		System.out.println();
 	}
 	
 	public boolean[] testResults(){

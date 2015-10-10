@@ -24,7 +24,7 @@ public class WordFileReader {
 	 * Used to read the database file called "wordList.txt" into a WordDatabase structure
 	 * @param filename
 	 */
-	private void ReadFile(String filename){
+	public void readDatabaseFile(String filename){
 		try {
 			Scanner sc = new Scanner(new File(filename));
 			String tempLine;
@@ -53,7 +53,7 @@ public class WordFileReader {
 	 * @param filename the file containing the puzzle information
 	 * @return a puzzle containing the data held in the specified file
 	 */
-	private Puzzle ReadPuzzle(String filename){
+	public Puzzle readPuzzleFile(String filename){
 		
 		try {
 			Scanner sc = new Scanner(new File(filename));
@@ -96,34 +96,6 @@ public class WordFileReader {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		WordDatabase db = new WordDatabase();
-		WordFileReader fr = new WordFileReader(db);
-		
-		String filename = "./words/wordlist.txt";
-		fr.ReadFile(filename);
-		//fr.dataBase.PrintDatabase();
-
-		String puzzleName = "./words/puzzle1.txt";
-		Puzzle p = fr.ReadPuzzle(puzzleName);
-		//p.PrintPuzzle();
-		//p.PrintPuzzleInvert();
-		
-		//LetterBasedCSP csp = new LetterBasedCSP(p, db);
-		WordBasedCSP csp = new WordBasedCSP(p, db);
-		ArrayList<Character> assignment = new ArrayList<Character>();
-		for (int i = 0; i < p.getPuzzleSize(); i++){
-			assignment.add(null);
-		}
-		csp.RecursiveBacktracking(assignment, 0);
-		csp.printResults();
-		System.out.println();
-		System.out.println("Test Results:");
-		boolean[] testResults = csp.testResults();
-		for(int i = 0; i <testResults.length; i++ ){
-			System.out.print(testResults[i] + "\t");
-		}
-		
 		
 	}
 
