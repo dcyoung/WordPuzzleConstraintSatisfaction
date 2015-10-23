@@ -1,0 +1,7 @@
+ -> ALP -> SUP -> LEA(found result: [A, S, U, L, P, E, A])
+               -> LIE(found result: [A, S, U, L, P, I, E])
+               -> backtrack
+        -> backtrack
+ -> BOT -> backtrack
+ -> ZHO -> backtrack
+ -> backtrack
