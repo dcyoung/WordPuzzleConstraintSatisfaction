@@ -1,27 +1,27 @@
- -> AYE -> DAG -> backtrack
-        -> backtrack
- -> FIE -> DAG -> backtrack
-        -> backtrack
- -> HAW -> SIN -> HIS -> SAC(found result: [H, S, I, A, I, W, N, C, S])
-                      -> SAP(found result: [H, S, I, A, I, W, N, P, S])
-                      -> SOD(found result: [H, S, I, O, I, W, N, D, S])
-                      -> SOY(found result: [H, S, I, O, I, W, N, Y, S])
-                      -> backtrack
-               -> backtrack
-        -> backtrack
- -> HOW -> SIN -> HIS -> SAC -> SAP -> SOD -> SOY -> backtrack
-               -> backtrack
-        -> backtrack
- -> HUM -> backtrack
- -> SAY -> SIN -> backtrack
-        -> backtrack
- -> WOW -> SIN -> HIS -> SAC -> SAP -> SOD -> SOY -> backtrack
-               -> backtrack
-        -> backtrack
- -> YAY -> SIN -> backtrack
-        -> backtrack
- -> YOW -> SIN -> HIS -> SAC -> SAP -> SOD -> SOY -> backtrack
-               -> backtrack
-        -> backtrack
- -> YUM -> backtrack
- -> backtrack
+root -> AYE -> DAG -> backtrack
+			-> backtrack
+	 -> FIE -> DAG -> backtrack
+			-> backtrack
+	 -> HAW -> SIN -> HIS -> SAC(found result: HSIAIWNCS)
+						  -> SAP(found result: HSIAIWNPS)
+						  -> SOD(found result: HSIOIWNDS)
+						  -> SOY(found result: HSIOIWNYS)
+						  -> backtrack
+				   -> backtrack
+			-> backtrack
+	 -> HOW -> SIN -> HIS -> SAC -> SAP -> SOD -> SOY -> backtrack
+				   -> backtrack
+			-> backtrack
+	 -> HUM -> backtrack
+	 -> SAY -> SIN -> backtrack
+			-> backtrack
+	 -> WOW -> SIN -> HIS -> SAC -> SAP -> SOD -> SOY -> backtrack
+				   -> backtrack
+			-> backtrack
+	 -> YAY -> SIN -> backtrack
+			-> backtrack
+	 -> YOW -> SIN -> HIS -> SAC -> SAP -> SOD -> SOY -> backtrack
+				   -> backtrack
+			-> backtrack
+	 -> YUM -> backtrack
+	 -> backtrack

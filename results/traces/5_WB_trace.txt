@@ -1,13 +1,13 @@
- -> ION -> HEN -> TIE -> TOE -> NON(found result: [I, H, T, T, N, O, I, E, N])
-                             -> YON(found result: [I, H, T, T, Y, O, I, E, N])
-                             -> backtrack
-                      -> backtrack
-               -> backtrack
-        -> backtrack
- -> TON -> HEN -> TIE -> TOE -> NON(found result: [T, H, T, T, N, O, I, E, N])
-                             -> YON(found result: [T, H, T, T, Y, O, I, E, N])
-                             -> backtrack
-                      -> backtrack
-               -> backtrack
-        -> backtrack
- -> backtrack
+root -> ION -> HEN -> TIE -> TOE -> NON(found result: IHTTNOIEN)
+								 -> YON(found result: IHTTYOIEN)
+								 -> backtrack
+						  -> backtrack
+				   -> backtrack
+			-> backtrack
+	 -> TON -> HEN -> TIE -> TOE -> NON(found result: THTTNOIEN)
+								 -> YON(found result: THTTYOIEN)
+								 -> backtrack
+						  -> backtrack
+				   -> backtrack
+			-> backtrack
+	 -> backtrack
