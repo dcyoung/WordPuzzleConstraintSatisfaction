@@ -1,4 +1,4 @@
-(Soln #0: IHTTNOIEN)  container: TIN  number: TEN  music: TIE  animal: HEN  noun: ION  body: TOE  adverb: NON	[Valid = true]
-(Soln #1: IHTTYOIEN)  container: TIN  number: TEN  music: TIE  animal: HEN  noun: ION  body: TOE  adverb: YON	[Valid = true]
-(Soln #2: THTTNOIEN)  container: TIN  number: TEN  music: TIE  animal: HEN  noun: TON  body: TOE  adverb: NON	[Valid = true]
-(Soln #3: THTTYOIEN)  container: TIN  number: TEN  music: TIE  animal: HEN  noun: TON  body: TOE  adverb: YON	[Valid = true]
+root -> I -> H -> T -> T -> N -> O -> I -> E -> N (IHTTNOIEN)
+                         -> Y -> O -> I -> E -> N (IHTTYOIEN)
+     -> T -> H -> T -> T -> N -> O -> I -> E -> N (THTTNOIEN)
+                         -> Y -> O -> I -> E -> N (THTTYOIEN)

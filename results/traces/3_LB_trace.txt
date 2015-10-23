@@ -1,2 +1,2 @@
-(Soln #0: ASULPEA)  nature: ALP  interjection: SUP  animal: ASP  noun: LEA  food: PEA	[Valid = true]
-(Soln #1: ASULPIE)  nature: ALP  interjection: SUP  animal: ASP  noun: LIE  food: PIE	[Valid = true]
+root -> A -> S -> U -> L -> P -> E -> A (ASULPEA)
+                              -> I -> E (ASULPIE)
