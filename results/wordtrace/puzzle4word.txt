@@ -1,0 +1,12 @@
+ -> FAX -> backtrack
+ -> HIT -> EYE -> DIE -> IRE(found result: [H, E, D, I, T, Y, R, E])
+                      -> backtrack
+               -> LIE -> IRE(found result: [H, E, L, I, T, Y, R, E])
+                      -> backtrack
+               -> TIE -> IRE(found result: [H, E, T, I, T, Y, R, E])
+                      -> backtrack
+               -> backtrack
+        -> backtrack
+ -> WEB -> backtrack
+ -> WWW -> backtrack
+ -> backtrack

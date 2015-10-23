@@ -1,0 +1,19 @@
+ -> NAE -> NEE -> MAN -> DYE(found result: [N, N, E, M, A, N, D, Y, E])
+                      -> backtrack
+               -> SAY -> DYE(found result: [N, N, E, S, A, Y, D, Y, E])
+                      -> backtrack
+               -> backtrack
+        -> WEE -> MAN -> DYE(found result: [N, W, E, M, A, N, D, Y, E])
+                      -> backtrack
+               -> SAY -> DYE(found result: [N, W, E, S, A, Y, D, Y, E])
+                      -> backtrack
+               -> backtrack
+        -> backtrack
+ -> NAW -> NEE -> MAN -> DYE -> backtrack
+               -> SAY -> DYE -> backtrack
+               -> backtrack
+        -> WEE -> MAN -> DYE -> backtrack
+               -> SAY -> DYE -> backtrack
+               -> backtrack
+        -> backtrack
+ -> backtrack
