@@ -1,0 +1,4 @@
+(Soln #0: NNEMANDYE)  adjective: NEE  emotion: MAD  interjection: MAN  verb: DYE  body: EYE  adverb: NAE	[Valid = true]
+(Soln #1: NNESAYDYE)  adjective: NEE  emotion: SAD  interjection: SAY  verb: DYE  body: EYE  adverb: NAE	[Valid = true]
+(Soln #2: NWEMANDYE)  adjective: WEE  emotion: MAD  interjection: MAN  verb: DYE  body: EYE  adverb: NAE	[Valid = true]
+(Soln #3: NWESAYDYE)  adjective: WEE  emotion: SAD  interjection: SAY  verb: DYE  body: EYE  adverb: NAE	[Valid = true]

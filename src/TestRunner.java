@@ -111,6 +111,7 @@ public class TestRunner {
 		for(int i = 1; i < 6; i++ ){
 			tr.testLetterBasedCSP(dbFile, "./words/puzzle" + i + ".txt");
 			tr.testWordBasedCSP(dbFile, "./words/puzzle" + i + ".txt");
+			
 		}
 		
 	}

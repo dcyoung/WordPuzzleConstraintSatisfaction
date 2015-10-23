@@ -23,6 +23,8 @@ public class WordBasedCSP {
 	//Holds the final set of solutions. Each solution is an array of characters
 	private ArrayList<ArrayList<Character>> results;
 	
+	
+	
 	/**
 	 * Constructor
 	 * @param puzzle
