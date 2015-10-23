@@ -1,3 +1,3 @@
-(Soln #0: HEDITYRE)  computer: HIT  pronoun: HER  interjection: HEY  verb: DIE  noun: IRE  body: EYE	[Valid = true]
-(Soln #1: HELITYRE)  computer: HIT  pronoun: HER  interjection: HEY  verb: LIE  noun: IRE  body: EYE	[Valid = true]
-(Soln #2: HETITYRE)  computer: HIT  pronoun: HER  interjection: HEY  verb: TIE  noun: IRE  body: EYE	[Valid = true]
+(Soln #0: HEDITYRE)  computer: HIT  pronoun: HER  interjection: HEY  verb: DIE  noun: IRE  body: EYE
+(Soln #1: HELITYRE)  computer: HIT  pronoun: HER  interjection: HEY  verb: LIE  noun: IRE  body: EYE
+(Soln #2: HETITYRE)  computer: HIT  pronoun: HER  interjection: HEY  verb: TIE  noun: IRE  body: EYE

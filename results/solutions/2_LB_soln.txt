@@ -1,4 +1,4 @@
-(Soln #0: HSIAIWNCS)  palindrome: SIS  pronoun: HIS  interjection: HAW  verb: SAW  noun: SAC  math: SIN	[Valid = true]
-(Soln #1: HSIAIWNPS)  palindrome: SIS  pronoun: HIS  interjection: HAW  verb: SAW  noun: SAP  math: SIN	[Valid = true]
-(Soln #2: HSIOIWNDS)  palindrome: SIS  pronoun: HIS  interjection: HOW  verb: SOW  noun: SOD  math: SIN	[Valid = true]
-(Soln #3: HSIOIWNYS)  palindrome: SIS  pronoun: HIS  interjection: HOW  verb: SOW  noun: SOY  math: SIN	[Valid = true]
+(Soln #0: HSIAIWNCS)  palindrome: SIS  pronoun: HIS  interjection: HAW  verb: SAW  noun: SAC  math: SIN
+(Soln #1: HSIAIWNPS)  palindrome: SIS  pronoun: HIS  interjection: HAW  verb: SAW  noun: SAP  math: SIN
+(Soln #2: HSIOIWNDS)  palindrome: SIS  pronoun: HIS  interjection: HOW  verb: SOW  noun: SOD  math: SIN
+(Soln #3: HSIOIWNYS)  palindrome: SIS  pronoun: HIS  interjection: HOW  verb: SOW  noun: SOY  math: SIN
